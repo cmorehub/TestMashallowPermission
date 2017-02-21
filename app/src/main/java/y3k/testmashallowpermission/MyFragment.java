@@ -2,6 +2,7 @@ package y3k.testmashallowpermission;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -46,6 +47,7 @@ public class MyFragment extends Fragment implements ActivityCompat.OnRequestPerm
         else{
             startListenLocation();
         }
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
     }
 
     TextView textView;
